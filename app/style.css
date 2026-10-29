@@ -1,0 +1,24 @@
+:root{--bg:#1c1f22;--panel:#26292d;--aqua:#2ee6d6;--halo:#ffe9a8;--txt:#e8f0f0}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:radial-gradient(circle at 50% -10%,#2ee6d633,transparent 60%),var(--bg);color:var(--txt);font-family:system-ui,sans-serif;user-select:none;touch-action:manipulation}
+header{display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
+h1{font-size:20px;margin:0;letter-spacing:2px}h1 span{color:var(--aqua);text-shadow:0 0 12px var(--aqua)}
+nav{display:flex;gap:6px;padding:0 12px}nav button{flex:1}
+button{background:var(--panel);color:var(--txt);border:1px solid #3a3f44;border-radius:12px;padding:10px;font-size:14px}
+button.on{border-color:var(--aqua);box-shadow:0 0 10px var(--aqua);color:var(--aqua)}
+section{display:none;padding:12px}section.show{display:block}
+.pads{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.pad{aspect-ratio:1;border-radius:16px;background:linear-gradient(145deg,#2c3034,#202326);border:2px solid #2ee6d655;font-size:12px}
+.pad.hit{background:var(--aqua);color:#000;box-shadow:0 0 22px var(--aqua),0 0 40px var(--halo)}
+.knobs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:14px 0;text-align:center;font-size:11px}
+.knob{width:58px;height:58px;margin:auto;border-radius:50%;background:#2a2e32;border:3px solid var(--aqua);position:relative;box-shadow:0 0 12px #2ee6d655;touch-action:none}
+.knob i{position:absolute;left:50%;top:4px;width:3px;height:18px;background:var(--halo);transform-origin:50% 25px;margin-left:-1.5px}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}.row button{flex:1}
+.seq{display:grid;grid-template-columns:40px repeat(16,1fr);gap:2px;font-size:9px;align-items:center}
+.seq b{height:22px;background:#2a2e32;border-radius:3px}.seq b.on{background:var(--aqua)}.seq b.cur{outline:1px solid var(--halo)}
+#ptt{width:100%;height:42vh;border-radius:50%;font-size:28px;font-weight:700;border:4px solid var(--aqua);box-shadow:0 0 30px var(--aqua),0 0 70px #ffe9a855;background:radial-gradient(#2ee6d633,var(--panel))}
+#ptt.live{background:var(--aqua);color:#000}
+.big button{font-size:18px;padding:18px}
+#status,#log{color:var(--halo);font-size:13px;min-height:18px}
+.note{background:#2a2e32;border-left:3px solid var(--halo);padding:8px;font-size:12px;border-radius:6px}
+input{width:100%;padding:10px;border-radius:10px;border:1px solid #3a3f44;background:#15181a;color:var(--txt)}
